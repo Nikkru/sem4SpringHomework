@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Note</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1 th:text="${pageTitle}"></h1>
+<form method="post" th:action="${givenAction}">
+    <div>
+        <input name="title" type="text" placeholder="title" th:value="${givenTitle}" />
+    </div>
+    <div>
+        <textarea name="note" type="text" placeholder="note" th:text="${givenNote}"></textarea>
+    </div>
+    <div>
+        <button type="submit">Post</button>
+    </div>
+</form>
+</body>
+</html>

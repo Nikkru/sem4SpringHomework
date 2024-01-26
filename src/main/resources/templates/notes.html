@@ -5,9 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1 th:text="${title}"></h1>
+<h1>Notebook</h1>
+<div th:each="n : *{allNotes}">
+    <h2 th:text="${n.title}"></h2>
+    <p th:text="${n.note}"></p>
 </div>
-<a href="/notes">Open Notebook</a>
+<div>
+    <a href="/note">New Note</a>
 </div>
 </body>
 </html>
